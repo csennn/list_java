@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int n = scan.nextInt();
+		List<Integer> liste = new ArrayList<>();
+		for (int i = 0; i < n; i++) {
+			int element = scan.nextInt();
+			liste.add(element);
+		}
+
+		int howManyCommand = scan.nextInt();
+		for (int i = 0; i < howManyCommand; i++) {
+			String command = scan.next();
+			if (command.equals("Insert")) {
+
+				liste.add(scan.nextInt(), scan.nextInt());
+
+			} else if (command.equals("Delete")) {
+				int willDelete = scan.nextInt();
+				liste.remove(willDelete);
+			}
+		}
+		for (int i = 0; i < liste.size(); i++) {
+			System.out.print(liste.get(i) + " ");
+		}
+	}
+}
