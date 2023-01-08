@@ -20,8 +20,7 @@ public class Solution {
 				liste.add(scan.nextInt(), scan.nextInt());
 
 			} else if (command.equals("Delete")) {
-				int willDelete = scan.nextInt();
-				liste.remove(willDelete);
+				liste.remove(scan.nextInt());
 			}
 		}
 		for (int i = 0; i < liste.size(); i++) {
